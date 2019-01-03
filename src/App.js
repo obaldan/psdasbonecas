@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Adverts from './components/adverts';
+import Header from './components/header';
 
 class App extends Component {
   render() {
+    let links = [
+      { label: 'Home', link: '#home'},
+      { label: 'About', link: '#about', active: true  },
+      { label: 'Portfolio', link: '#portfolio' },
+      { label: 'Contact Us', link: '#contact-us' },
+    ];
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Adverts />
+        <div className="container center">
+          <Header links={links}  />
+        </div>
       </div>
     );
   }
