@@ -7,7 +7,7 @@ import {
 
 import Home from './pages/home';
 import Contact from './pages/contact';
-import Stuff from './pages/stuff';
+import Assistence from './pages/assistence';
 import About from './pages/about';
 import './styles.css';
 
@@ -24,8 +24,9 @@ class Main extends Component{
                             <ul className="header">
                                 <li><NavLink exact to="/" activeClassName="activeNav">Home</NavLink></li>
                                 <li><NavLink exact to="/contact" activeClassName="activeNav">Contact</NavLink></li>
-                                <li><NavLink exact to="/stuff" activeClassName="activeNav">Stuff</NavLink></li>
+                                <li><NavLink exact to="/assistence" activeClassName="activeNav">Assistência técnica</NavLink></li>
                                 <li><NavLink exact to="/about" activeClassName="activeNav">Sobre a empresa</NavLink></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -33,7 +34,7 @@ class Main extends Component{
                     <div className="content">
                         <Route exact path="/" component={Home} />
                         <Route exact path="/contact" component={Contact} />
-                        <Route exact path="/stuff" component={Stuff} />
+                        <Route exact path="/assistence" component={Assistence} />
                         <Route exact path="/about" component={About} />
                     </div>
                 </div>
